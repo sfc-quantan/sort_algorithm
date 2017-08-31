@@ -14,6 +14,7 @@ def bubblesort(array):
                 temp = array[j]
                 array[j] = array[j + 1]
                 array[j + 1] = temp
+
         if array2 == array:
             break
 
