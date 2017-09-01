@@ -1,5 +1,5 @@
-listd= range(5)
-print(listd)
+# -*-coding: utf-8 -*-
 
-for i in range(10,0,-1):
-    print(i)
+a = list(range(1,21))
+ab = []
+

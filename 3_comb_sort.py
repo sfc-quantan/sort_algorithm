@@ -4,37 +4,30 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from parser_n import parse
 
-
-def bubblesort(n):
+def shellsort(n):
+    h = int(n/2)
     array = list(range(1, n + 1))
     random.shuffle(array)
     fig = plt.figure()
     left = range(1, n + 1)
     ims = []
-    for i in range(len(array) - 1):
+    for i in range(h, 0, -1):
         print(array)
-        array2 = array[:]
-        for j in range(len(array) - 1):
+        for j in range(n - i):
             height = array
             im = plt.bar(left, height, color="#66cdaa")
             ims.append(im)
-            if array[j] < array[j + 1]:
-                temp = array[j]
-                array[j] = array[j + 1]
-                array[j + 1] = temp
-
-        if array2 == array:
-            break
+            if array[j] < array[j + i]:
+                array[j], array[j + i] = array[j + i], array[j]
     ani = animation.ArtistAnimation(fig, ims)
     plt.show(block=False)
     input("Enter to close")
     plt.close()
 
-
 def main():
     n = parse()
-    bubblesort(n)
-
+    shellsort(n)
 
 if __name__ == '__main__':
     main()
+
