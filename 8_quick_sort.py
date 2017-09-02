@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from parser_n import parse
 
+
 def a_part_of_quicksort(array):
     
     x = int(len(array)/2)
