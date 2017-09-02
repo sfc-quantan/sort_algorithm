@@ -12,9 +12,9 @@ def shellsort(n):
     left = range(1, n + 1)
     ims = []
     for i in range(h, 0, -1):
-        print(array)
         for j in range(n - i):
             height = array
+            print(array)
             im = plt.bar(left, height, color="#66cdaa")
             ims.append(im)
             if array[j] < array[j + i]:

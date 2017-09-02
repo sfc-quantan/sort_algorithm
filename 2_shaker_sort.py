@@ -16,6 +16,7 @@ def shakersort(n):
         if i % 2 == 0:
             for j in range(n - 1):
                 height = array
+                print(array)
                 im = plt.bar(left, height, color="#66cdaa")
                 ims.append(im)
                 if array[j] < array[j + 1]:
@@ -23,6 +24,7 @@ def shakersort(n):
         else:
             for j in range(n - 1, 0, -1):
                 height = array
+                print(array)
                 im = plt.bar(left, height, color="#66cdaa")
                 ims.append(im)
                 if array[j] > array[j - 1]:

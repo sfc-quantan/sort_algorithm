@@ -12,9 +12,9 @@ def bubblesort(n):
     left = range(1, n + 1)
     ims = []
     for i in range(len(array) - 1):
-        print(array)
         array2 = array[:]
         for j in range(len(array) - 1):
+            print(array)
             height = array
             im = plt.bar(left, height, color="#66cdaa")
             ims.append(im)

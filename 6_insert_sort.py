@@ -12,12 +12,12 @@ def insert_sort(n):
     ims = []
     left = range(1, len(array) + 1)
     for i in range(1, len(array) + 1):
-        print(array)
         if i >= len(array):
             break
         temp = array[i]
         for j in reversed(range(i)):
             height = array
+            print(array)
             im = plt.bar(left, height, color="#66cdaa")
             ims.append(im)
             if temp > array[j]:

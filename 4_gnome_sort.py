@@ -11,13 +11,22 @@ def gnomesort(n):
     fig = plt.figure()
     left = range(1, n + 1)
     ims = []
-
-    for i in range(1, n):
+    g = 1
+    while g < n:
         print(array)
-        for j in range(i,0,-1):
-            if array[j - 1] >  array[j]:
-                array[j - 1], array[j] = array[j], array[j - 1]
-
+        height = array
+        im = plt.bar(left, height, color="#66cdaa")
+        ims.append(im)
+        if array[g - 1] > array[g]:
+            array[g], array[g - 1] = array[g - 1], array[g]
+            if g > 1:
+                g -= 1
+        else:
+            g += 1
+    ani = animation.ArtistAnimation(fig, ims)
+    plt.show(block=False)
+    input("Enter to close")
+    plt.close()
 
 
 

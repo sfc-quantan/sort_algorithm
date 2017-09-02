@@ -14,17 +14,19 @@ def insert_sort(array):
             break
         temp = array[i]
         for j in reversed(range(i)):
-            im = plt.plot(array)
-            ims.append(im)
             if temp > array[j]:
                # temp2 = array[j + 1]
                # array[j + 1] = array[j]
                # array[j] = temp2
-               array[j + 1], array[j] = array[j], array[j + 1]
+                array[j + 1], array[j] = array[j], array[j + 1]
+                im = plt.plot(array)
+                ims.append(im)
 
             else:
                 array.pop(j + 1)
                 array.insert(j + 1, temp)
+                im = plt.plot(array)
+                ims.append(im)
                 break
 
     ani = animation.ArtistAnimation(fig, ims, repeat_delay=1000)
