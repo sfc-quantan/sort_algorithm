@@ -3,7 +3,8 @@
 import random
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-from  parser_n import parse
+from parser_n import parse
+
 
 def gnomesort(n):
     array = list(range(1, n + 1))
@@ -27,8 +28,6 @@ def gnomesort(n):
     plt.show(block=False)
     input("Enter to close")
     plt.close()
-
-
 
 
 def main():

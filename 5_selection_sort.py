@@ -8,7 +8,7 @@ from parser_n import parse
 def selectionsort(n):
     array = list(range(1, n + 1))
     random.shuffle(array)
-    left =range(1, n + 1)
+    left = range(1, n + 1)
     fig = plt.figure()
     ims = []
     idx = 0
@@ -29,6 +29,7 @@ def selectionsort(n):
     plt.show(block=False)
     input("Enter to close")
     plt.close()
+
 
 def main():
     n = parse()

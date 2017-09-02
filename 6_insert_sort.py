@@ -27,8 +27,8 @@ def insert_sort(n):
                 array[j + 1], array[j] = array[j], array[j + 1]
 
             else:
-               # array.pop(j + 1)
-               # array.insert(j + 1, temp)
+                # array.pop(j + 1)
+                # array.insert(j + 1, temp)
                 break
 
     ani = animation.ArtistAnimation(fig, ims, repeat_delay=1000)

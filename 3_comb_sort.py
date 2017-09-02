@@ -4,8 +4,9 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from parser_n import parse
 
+
 def shellsort(n):
-    h = int(n/2)
+    h = int(n / 2)
     array = list(range(1, n + 1))
     random.shuffle(array)
     fig = plt.figure()
@@ -23,6 +24,7 @@ def shellsort(n):
     plt.show(block=False)
     input("Enter to close")
     plt.close()
+
 
 def main():
     n = parse()

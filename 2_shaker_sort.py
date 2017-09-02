@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from parser_n import parse
 
+
 def shakersort(n):
     array = list(range(1, n + 1))
     random.shuffle(array)
@@ -20,7 +21,7 @@ def shakersort(n):
                 im = plt.bar(left, height, color="#66cdaa")
                 ims.append(im)
                 if array[j] < array[j + 1]:
-                    array[j], array[j +1] = array[j + 1], array[j]
+                    array[j], array[j + 1] = array[j + 1], array[j]
         else:
             for j in range(n - 1, 0, -1):
                 height = array
@@ -37,6 +38,7 @@ def shakersort(n):
     plt.show(block=False)
     input("Enter to close")
     plt.close()
+
 
 def main():
     n = parse()

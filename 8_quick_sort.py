@@ -6,13 +6,13 @@ from parser_n import parse
 
 
 def a_part_of_quicksort(array):
-    
+
     x = int(len(array)/2)
-    pivot = array[x] 
+    pivot = array[x]
     print(pivot)
     left, right = 0, 0
     while True:
-        for i in range(len(array) -1):
+        for i in range(len(array) - 1):
             if pivot < array[i]:
                 left = i
                 break
@@ -26,15 +26,14 @@ def a_part_of_quicksort(array):
         else:
             array1, array2 = array[:left], array[left:]
             break
-    return array1,array2
-    
+    return array1, array2
+
 
 def quicksort(n):
     array = list(range(0, n))
     random.shuffle(array)
-    array1,array2 = a_part_of_quicksort(array)
-    print(array1,array2)
-        
+    array1, array2 = a_part_of_quicksort(array)
+    print(array1, array2)
 
 
 def main():
