@@ -24,7 +24,7 @@ def gnomesort(n):
                 g -= 1
         else:
             g += 1
-    ani = animation.ArtistAnimation(fig, ims, interval=100)
+    ani = animation.ArtistAnimation(fig, ims, interval=30)
     plt.show(block=False)
     input("Enter to close")
     plt.close()

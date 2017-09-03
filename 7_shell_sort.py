@@ -27,7 +27,7 @@ def shellsort(n):
                     break
                 else:
                     array[k], array[k - h[i]] = array[k - h[i]], array[k]
-    ani = animation.ArtistAnimation(fig, ims, interval=100)
+    ani = animation.ArtistAnimation(fig, ims, interval=30)
     plt.show(block=False)
     input("Enter to clone")
     plt.close()

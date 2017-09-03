@@ -12,7 +12,7 @@ def shellsort(n):
     fig = plt.figure()
     left = range(1, n + 1)
     ims = []
-    for i in range(h, 0, -1):
+    for i in range(h, -1, -1):
         for j in range(n - i):
             height = array
             print(array)
@@ -20,7 +20,7 @@ def shellsort(n):
             ims.append(im)
             if array[j] < array[j + i]:
                 array[j], array[j + i] = array[j + i], array[j]
-    ani = animation.ArtistAnimation(fig, ims, interval=100)
+    ani = animation.ArtistAnimation(fig, ims, interval=30)
     plt.show(block=False)
     input("Enter to close")
     plt.close()

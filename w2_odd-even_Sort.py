@@ -4,16 +4,17 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from parser_n import parse
 
+
 def oddevensort(n):
     odd = 0
     array = list(range(n))
     random.shuffle(array)
     fig = plt.figure()
-    ims =[]
+    ims = []
     left = range(1, n + 1)
     height = array
 
-    for i in range(n-1):
+    for i in range(n - 1):
         for j in range(odd, n - 1 - odd):
             if array[j] < array[j + 1]:
                 array[j], array[j + 1] = array[j + 1], array[j]
@@ -22,11 +23,12 @@ def oddevensort(n):
                 print(array)
 
         odd = 1 if odd == 0 else 0
-    
-    ani = animation.ArtistAnimation(fig, ims, interval=100)
+
+    ani = animation.ArtistAnimation(fig, ims, interval=30)
     plt.show(block=False)
     input("Enter to close")
     plt.close()
+
 
 def main():
     n = parse()

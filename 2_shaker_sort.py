@@ -32,7 +32,7 @@ def shakersort(n):
                     array[j], array[j - 1] = array[j - 1], array[j]
             if array2 == array:
                 break
-    ani = animation.ArtistAnimation(fig, ims, interval=100)
+    ani = animation.ArtistAnimation(fig, ims, interval=30)
     plt.show(block=False)
     input("Enter to close")
     plt.close()

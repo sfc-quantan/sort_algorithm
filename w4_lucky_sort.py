@@ -2,7 +2,7 @@
 import random
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-from parser_n import parse
+
 
 def lucky_sort(n):
     array = list(range(1, n + 1))
@@ -20,15 +20,15 @@ def lucky_sort(n):
         if array == array2:
             break
 
-    ani = animation.ArtistAnimation(fig, ims,interval=5, repeat=False)
+    ani = animation.ArtistAnimation(fig, ims, interval=5, repeat=False)
     plt.show(block=False)
     input("Enter to close")
     plt.close()
 
+
 def main():
-    n =6 
+    n = 6
     lucky_sort(n)
 
 if __name__ == "__main__":
     main()
-        
