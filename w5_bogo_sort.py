@@ -15,8 +15,9 @@ def lucky_sort(n):
     while True:
         if array == array2:
             break
-        a,b =random.randint(0,len(array)-1), random.randint(0, len(array)-1)
-        print(a,b)
+        a = random.randint(0, len(array) - 1)
+        b = random.randint(0, len(array) - 1)
+        print(a, b)
 
         array[a], array[b] = array[b], array[a]
 
@@ -30,7 +31,7 @@ def lucky_sort(n):
 
 
 def main():
-    n = 5 
+    n = 5
     lucky_sort(n)
 
 if __name__ == "__main__":

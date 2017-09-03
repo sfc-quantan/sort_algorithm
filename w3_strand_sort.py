@@ -14,13 +14,11 @@ def strandsort(n):
     t_list = []
     s_list = []
     pop = []
-    mt = []
 
     while len(array):
         temp = array[0]
         pop.append(array[0])
         t_list.append(array[0])
-        print(array)
         for i in range(1, len(array)):
             if temp > array[i]:
                 temp = array[i]
@@ -29,7 +27,7 @@ def strandsort(n):
                 print("t:", t_list)
         for l in range(len(pop)):
             array.remove(pop[l])
-        
+
         s_list.extend(t_list)
         height = s_list
         left = range(1, len(s_list) + 1)
@@ -40,8 +38,6 @@ def strandsort(n):
                     im = plt.bar(left, height, color="#66cdaa")
                     ims.append(im)
 
-            
-
         t_list = []
         pop = []
         print("s:", s_list)
@@ -51,13 +47,6 @@ def strandsort(n):
     plt.show(block=False)
     input("Enter to close")
     plt.close()
-
-
-
-
-
-
-
 
 
 def main():
