@@ -20,7 +20,7 @@ def shellsort(n):
             ims.append(im)
             if array[j] < array[j + i]:
                 array[j], array[j + i] = array[j + i], array[j]
-    ani = animation.ArtistAnimation(fig, ims)
+    ani = animation.ArtistAnimation(fig, ims, interval=100)
     plt.show(block=False)
     input("Enter to close")
     plt.close()

@@ -25,7 +25,7 @@ def bubblesort(n):
 
         if array2 == array:
             break
-    ani = animation.ArtistAnimation(fig, ims)
+    ani = animation.ArtistAnimation(fig, ims, interval=100)
     plt.show(block=False)
     input("Enter to close")
     plt.close()

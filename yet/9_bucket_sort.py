@@ -10,6 +10,11 @@ def bucketsort(n):
     fig = plt.figure()
     height = array
     ims = []
+    bucket = [range(10)]
+    for i in range(n):
+
+
+
 
 
 def main():

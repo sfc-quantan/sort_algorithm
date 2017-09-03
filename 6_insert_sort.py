@@ -31,7 +31,7 @@ def insert_sort(n):
                 # array.insert(j + 1, temp)
                 break
 
-    ani = animation.ArtistAnimation(fig, ims, repeat_delay=1000)
+    ani = animation.ArtistAnimation(fig, ims, interval=100)
     plt.show(block=False)
     input("Enter to close")
     plt.close()
