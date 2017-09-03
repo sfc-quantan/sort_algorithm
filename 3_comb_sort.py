@@ -5,7 +5,7 @@ import matplotlib.animation as animation
 from parser_n import parse
 
 
-def shellsort(n):
+def combsort(n):
     h = int(n / 2)
     array = list(range(1, n + 1))
     random.shuffle(array)
@@ -28,7 +28,7 @@ def shellsort(n):
 
 def main():
     n = parse()
-    shellsort(n)
+    combsort(n)
 
 if __name__ == '__main__':
     main()

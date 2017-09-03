@@ -25,7 +25,7 @@ def selectionsort(n):
             im = plt.bar(left, height, color="#66cdaa")
             ims.append(im)
 
-    ani = animation.ArtistAnimation(fig, ims, interval=30)
+    ani = animation.ArtistAnimation(fig, ims, interval=30, repeat=True)
     plt.show(block=False)
     input("Enter to close")
     plt.close()

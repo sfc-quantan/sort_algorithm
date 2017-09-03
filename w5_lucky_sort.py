@@ -12,6 +12,7 @@ def lucky_sort(n):
     ims = []
     while True:
         random.shuffle(array)
+        print(array)
         array2 = array[:]
         array2.sort()
         height = array

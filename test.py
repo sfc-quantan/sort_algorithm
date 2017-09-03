@@ -14,3 +14,5 @@ for i in range(10):
 print(type(add),len([]))
 for i in range(5):
     print(random.randint(1,2))
+
+a = [[],[],[],[],[],[],[],[],[],[]]

@@ -7,7 +7,7 @@ from parser_n import parse
 
 def oddevensort(n):
     odd = 0
-    array = list(range(n))
+    array = list(range(1,n + 1))
     random.shuffle(array)
     fig = plt.figure()
     ims = []
