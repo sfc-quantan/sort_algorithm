@@ -2,7 +2,7 @@
 import random
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-from parser_n import parse
+from parser import parse
 
 
 def combsort(n):
@@ -18,6 +18,7 @@ def combsort(n):
         for j in range(0, n - i):
             if a[j] <= a[j + i]:
                 a[j], a[j + i] = a[j + i], a[j]
+                
                 im = plt.bar(left, height, color="#66cdaa")
                 ims.append(im)
 

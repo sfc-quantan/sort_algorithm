@@ -6,12 +6,13 @@ from parser_n import parse
 
 
 def a_part_of_quicksort(array):
+
     if len(array)==1 or len(array)==0:
         return array
     x = int(len(array)/2)
     pivot = array[x]
     print(pivot)
-    left, right = 0, 0
+    left,right =0,0
     while True:
         for i in range(len(array) - 1):
             if pivot < array[i]:
@@ -25,26 +26,24 @@ def a_part_of_quicksort(array):
             array[left], array[right] = array[right], array[left]
             print(array)
         else:
-            array1, array2 = array[:left], array[left:]
+            array = array[:left], array[left:]
             # array3 = array1,array2
             break
-    return array1, array2 # array3
-
+    return array
 
 
 def quicksort(n):
     array = list(range(0, n))
     random.shuffle(array)
-    p = 2
-    while p < n:
-        p *= 2
-        array = a_part_of_quicksort(array) 
-        print(array)
+    array = a_part_of_quicksort(array) 
+    print(array)
 
 
 def main():
     n = parse()
-    quicksort(n)
-
+    array = list(range(0,n))
+    random.shuffle(array)
+    array=a_part_of_quicksort(array)
+    print(array)
 if __name__ == '__main__':
     main()

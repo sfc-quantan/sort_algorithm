@@ -12,8 +12,6 @@ def bucketsort(n):
     array = list(range(1, 1 + n))
     random.shuffle(array)
     fig = plt.figure()
-    height = array
-    left = range(1, n + 1)
     ims = []
     bucket = []
     print(array)
@@ -24,17 +22,19 @@ def bucketsort(n):
         for j in range(1,n + 1):
             if array[i] == j:
                 bucket[j-1].append(array[i])
+                b = flatten(bucket)
+                height = b
+                left = range(1, 1 + len(b))
 
+                im = plt.bar(left, height, color="#66cdaa")
+                ims.append(im)
 
-    im = plt.bar(left, height, color="#66cdaa")
-    ims.append(im)
+    #im = plt.bar(left, height, color="#66cdaa")
+    #ims.append(im)
 
     b = flatten(bucket)
     print(b)
-    height = b
-    im = plt.bar(left, height, color="#66cdaa")
-    ims.append(im) 
-    ani = animation.ArtistAnimation(fig, ims, interval=600)
+    ani = animation.ArtistAnimation(fig, ims, interval=20)
     plt.show(block=False)
     input("Enter to close")
     plt.close()
