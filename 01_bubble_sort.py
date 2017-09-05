@@ -11,14 +11,14 @@ def bubblesort(n):
     fig = plt.figure()
     left = range(1, n + 1)
     ims = []
-    for i in range(len(array) - 1):
+    for i in range(len(array)):
         array2 = array[:]
-        for j in range(len(array) - 1):
+        for j in range(len(array) - i - 1):
             print(array)
             height = array
             im = plt.bar(left, height, color="#66cdaa")
             ims.append(im)
-            if array[j] < array[j + 1]:
+            if array[j] <= array[j + 1]:
                 temp = array[j]
                 array[j] = array[j + 1]
                 array[j + 1] = temp

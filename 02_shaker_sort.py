@@ -12,20 +12,17 @@ def shakersort(n):
     fig = plt.figure()
     left = range(1, n + 1)
     ims = []
-    for i in range(n - 1):
+    height = array
+    for i in range(n):
         array2 = array[:]
         if i % 2 == 0:
-            for j in range(n - 1):
-                height = array
-                print(array)
+            for j in range(n - i - 1):
                 im = plt.bar(left, height, color="#66cdaa")
                 ims.append(im)
                 if array[j] < array[j + 1]:
                     array[j], array[j + 1] = array[j + 1], array[j]
         else:
-            for j in range(n - 1, 0, -1):
-                height = array
-                print(array)
+            for j in range(n - 1, i, -1):
                 im = plt.bar(left, height, color="#66cdaa")
                 ims.append(im)
                 if array[j] > array[j - 1]:
