@@ -15,4 +15,6 @@ print(type(add),len([]))
 for i in range(5):
     print(random.randint(1,2))
 
+
 a = [[],[],[],[],[],[],[],[],[],[]]
+print(int(1/2))
