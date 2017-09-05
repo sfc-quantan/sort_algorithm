@@ -17,7 +17,7 @@ def heap(array, until, ims, left, height):
                 ims.append(im)
             parents = int(parents/2)
             child = int(child/2)
-            if parents == 0:
+            if child  == 0:
                  break
     return array
 
@@ -30,14 +30,13 @@ def heapsort(n):
     ims = []
     height = array
 
-    for i in range(n-1, 0, -1):
-        print(array)
+    for i in range(n-1, 0, -1): 
         array = heap(array, i, ims,left,height)
         array[i],array[0] = array[0], array[i]
+        print(array)
         im = plt.bar(left, height, color="#66cdaa")
         ims.append(im)
 
-    print(array)
 
     
     ani = animation.ArtistAnimation(fig, ims, interval=30)
