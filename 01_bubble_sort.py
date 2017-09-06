@@ -10,21 +10,14 @@ def bubblesort(n):
     random.shuffle(array)
     fig = plt.figure()
     left = range(1, n + 1)
+    height = array
     ims = []
     for i in range(len(array)):
-        array2 = array[:]
         for j in range(len(array) - i - 1):
-            print(array)
-            height = array
             im = plt.bar(left, height, color="#66cdaa")
             ims.append(im)
             if array[j] <= array[j + 1]:
-                temp = array[j]
-                array[j] = array[j + 1]
-                array[j + 1] = temp
-
-        if array2 == array:
-            break
+                array[j], array[j + 1] = array[j + 1], array[j]
     ani = animation.ArtistAnimation(fig, ims, interval=30)
     plt.show(block=False)
     input("Enter to close")

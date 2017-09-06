@@ -13,13 +13,15 @@ def shellsort(n):
     ims = []
     h = [ 7,4,2,1,]
     for i in range(len(h)):
-        for j in range(1,n-h[i]+1):
+        for j in range(h[i],n):
             for k in range(j, 0 ,-1):
-                if a[k-1] <= a[k]:
-                    a[k-1], a[k] = a[k], a[k-1]
+                if a[k - h[i]] < a[k]:
+                    a[k-h[i]], a[k] = a[k], a[k-h[i]]
                     height= a
                     im = plt.bar(left, height, color="#66cdaa")
                     ims.append(im)
+                else:
+                    break
     print(a)
     
     
