@@ -15,8 +15,8 @@ def bucketsort(n):
         a= [array[i:i+p] for i in range(0,n,p)]
 
         for i in range(len(a)):
-            for j in range(len(a[i]) - 1):
-                for k in range(len(a[i]) - 1):
+            for j in range(len(a[i])-1):
+                for k in range(len(a[i])-1):
                     if a[i][k] < a[i][k + 1]:
                         a[i][k], a[i][k + 1] = a[i][k + 1], a[i][k]
         p*=2

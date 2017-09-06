@@ -16,32 +16,31 @@ def quicksort(a):
     if len(a) <= 1:
         return a
     pivot_num = int(len(a)/2)
-    pivot = a[pivot_num]
+    pivot = a[0]
     left,right =[],[]
 
-    for i in range(len(a)):
-        if a[i] < pivot:
+    for i in range(1, len(a)):
+        if a[i] <= pivot:
             left.append(a[i])
             
-        elif a[i] > pivot:
-            right.append(a[i])
         else:
-            e = [pivot]
+            right.append(a[i])
 
-    # print(left,pivot,right)
     left = quicksort(left)
     right = quicksort(right)
-    return left + e + right
+    return left + [pivot]  + right
 
 def main():
     fig = plt.figure()
     ims = []
     a = randomarray()
+    print(a)
     left = range(1, len(a) + 1)
     height = a
     im = plt.bar(left,height, color="#66cdaa")
     ims.append(im)
     a = quicksort(a)
+    print(a)
     height = a
     im = plt.bar(left,height, color="#66cdaa")
     ims.append(im)
@@ -50,7 +49,6 @@ def main():
     input("Enter to close")
     plt.close()
 
-    print(a)
 
 
 if __name__ == "__main__":

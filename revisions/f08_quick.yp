@@ -5,9 +5,13 @@ import matplotlib.animation as animation
 from parser_n import parse
 
 
-def quicksort(array, left, right):
-    x = int(len(array)/2)
+def a_part_of_quicksort(array):
+
+    if len(array) == 1 or len(array) == 0:
+        return array
+    x = int(len(array) / 2)
     pivot = array[x]
+    left, right = 0, 0
     while True:
         for i in range(len(array) - 1):
             if pivot < array[i]:
@@ -27,12 +31,19 @@ def quicksort(array, left, right):
     return array
 
 
+def quicksort(n):
+    array = list(range(0, n))
+    random.shuffle(array)
+    array = a_part_of_quicksort(array)
+    print(array)
+
+
 def main():
     n = parse()
-    array = list(range(0,n))
+    array = list(range(0, n))
     random.shuffle(array)
-    left, right =0, 0
-    array=quicksort(array, left, right)
+    print(array)
+    array = a_part_of_quicksort(array)
     print(array)
 
 
