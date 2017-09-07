@@ -14,8 +14,8 @@ def oddevensort(n):
     left = range(1, n + 1)
     height = array
 
-    for i in range(n - 1):
-        for j in range(odd, n - 1 - odd):
+    for i in range(n):
+        for j in range(odd, n - 1 - i - odd):
             if array[j] < array[j + 1]:
                 array[j], array[j + 1] = array[j + 1], array[j]
                 im = plt.bar(left, height, color="#66cdaa")

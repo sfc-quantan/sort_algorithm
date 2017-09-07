@@ -13,10 +13,11 @@ def bubblesort(n):
     height = array
     ims = []
     for i in range(len(array)):
-        for j in range(len(array) - i - 1):
+        for j in range(0, len(array) - i - 1):
+
             im = plt.bar(left, height, color="#66cdaa")
             ims.append(im)
-            if array[j] <= array[j + 1]:
+            if array[j] > array[j + 1]:
                 array[j], array[j + 1] = array[j + 1], array[j]
     ani = animation.ArtistAnimation(fig, ims, interval=30)
     plt.show(block=False)

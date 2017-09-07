@@ -2,7 +2,7 @@
 import random
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-from parser import parse
+from parser_n import parse
 
 
 def shellsort(n):
