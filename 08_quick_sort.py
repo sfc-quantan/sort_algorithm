@@ -14,6 +14,7 @@ def randomarray():
 def quicksort(a):
     print("a:",a)    
     if len(a) <= 1:
+        print("return :",a)
         return a
     pivot_num = int(len(a)/2)
     pivot = a[pivot_num]

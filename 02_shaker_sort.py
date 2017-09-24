@@ -1,43 +1,57 @@
-# -*- coding: utf-8 -*-
-
+# -*- coding:utf-8 -*-
 import random
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from parser_n import parse
 
 
-def shakersort(n):
-    array = list(range(1, n + 1))
-    random.shuffle(array)
+def shake(a):
+    count = 0
+    left = 0
+    right = len(a)-1
     fig = plt.figure()
-    left = range(1, n + 1)
     ims = []
-    height = array
-    for i in range(n):
-        array2 = array[:]
+    left1 = range(1, len(a) + 1)
+    height = a
+    for i in range(len(a)):
+        temp = 0
         if i % 2 == 0:
-            for j in range(n - i - 1):
-                im = plt.bar(left, height, color="#66cdaa")
-                ims.append(im)
-                if array[j] < array[j + 1]:
-                    array[j], array[j + 1] = array[j + 1], array[j]
+            for j in range(left,right):
+                if a[j] > a[j + 1]:
+                    a[j], a[j + 1] = a[j + 1], a[j]
+                    temp = j
+                    im = plt.bar(left1,height, color="#66cadd")
+                    ims.append(im)
+
+                right = temp
         else:
-            for j in range(n - 1, i, -1):
-                im = plt.bar(left, height, color="#66cdaa")
-                ims.append(im)
-                if array[j] > array[j - 1]:
-                    array[j], array[j - 1] = array[j - 1], array[j]
-            if array2 == array:
-                break
-    ani = animation.ArtistAnimation(fig, ims, interval=30)
+            for j in range(right, left, -1):
+                if a[j-1] >  a[j]:
+                    a[j], a[j - 1] = a[j - 1], a[j]
+                    temp =  j 
+                    im = plt.bar(left1, height, color="#66cadd")
+                    ims.append(im)
+                left = temp
+        if left == right:
+            break
+        print(right,left) 
+
+    
+    ani = animation.ArtistAnimation(fig, ims, interval=30, repeat=False)
     plt.show(block=False)
     input("Enter to close")
     plt.close()
+    return a
 
 
 def main():
     n = parse()
-    shakersort(n)
+    a = list(range(1, n + 1))
+    random.shuffle(a)
+    a = shake(a)
+    print(a)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
+
+
